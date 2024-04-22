@@ -1,0 +1,65 @@
+HELP.md
+#target/
+#!.mvn/wrapper/maven-wrapper.jar
+#!**/src/main/**/target/
+#!**/src/test/**/target/
+
+### STS ###
+#.apt_generated
+#.classpath
+#.factorypath
+#.project
+#.settings
+#.springBeans
+#.sts4-cache
+
+### IntelliJ IDEA ###
+#.idea
+#*.iws
+#*.iml
+#*.ipr
+
+### NetBeans ###
+#/nbproject/private/
+#/nbbuild/
+#/dist/
+#/nbdist/
+#/.nb-gradle/
+#build/
+#!**/src/main/**/build/
+#!**/src/test/**/build/
+
+### VS Code ###
+#.vscode/
+#########################################
+# Ignorar archivos de configuración específicos de tu IDE (Eclipse, IntelliJ, etc.)
+/.vscode/
+/.idea/
+/.classpath
+/.project
+/.settings/
+/.factorypath
+
+# Ignorar archivos de construcción y dependencias generadas por Maven
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Ignorar archivos de configuración local (como propiedades con contraseñas)
+/application.properties
+/application.yml
+
+# Ignorar archivos de registro y carpetas de datos generadas durante la ejecución
+/logs/
+/data/
+
+# Ignorar archivos de compilación Java
+*.class
+
+# Ignorar archivos de respaldo
+*~
+
+# Ignorar archivos de compilación y caché de Java
+*.jar
+*.war
+*.ear
+
