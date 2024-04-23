@@ -25,5 +25,5 @@ public class Categoria {
     private Double objetivoFinanciero;
     private Double porcentajeFinanciero;
     private Double progreso;
-    
+
 }
