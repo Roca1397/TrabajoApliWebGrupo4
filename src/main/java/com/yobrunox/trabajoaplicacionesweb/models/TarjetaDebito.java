@@ -1,12 +1,12 @@
 package com.yobrunox.trabajoaplicacionesweb.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -16,5 +16,9 @@ public class TarjetaDebito {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String nmroTarjeta;
+    private String numeroTarjeta;
+    private Date fechaVencimiento;
+    private Integer cvv;
+    private Integer claveDigital;
+
 }
