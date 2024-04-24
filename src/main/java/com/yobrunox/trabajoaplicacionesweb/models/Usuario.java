@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -16,7 +17,6 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
     private String nombreUsuario;
     private String apellidoUsuario;
     private String emailUsuario;
@@ -24,13 +24,11 @@ public class Usuario {
     private Date fechaRegistro = new Date();
     private String direccionUsuario;
     private String telefonoUsuario;
-
-
-
-
     //Referencias
     @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     @JoinColumn(name = "idCiudad")
     private Ciudad ciudad;
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "usuario",cascade = CascadeType.ALL)
+    List<TarjetaDebito> tarjetaDebito ;
 
 }

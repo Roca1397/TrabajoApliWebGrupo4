@@ -20,5 +20,7 @@ public class TarjetaDebito {
     private Date fechaVencimiento;
     private Integer cvv;
     private Integer claveDigital;
-
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn (name = "usuario_id")
+    Usuario usuario;
 }
